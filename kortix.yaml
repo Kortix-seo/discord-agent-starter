@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=https://kortix.com/schema/kortix.schema.json
+default_agent: discord-ops
+
+project:
+  name: discord-agent-starter
+  description: A company agent that works in a Discord server, with its grants and approval rules in one manifest.
+
+env:
+  optional: [HELPDESK_TOKEN]
+
+connectors:
+  - slug: helpdesk
+    provider: http
+    base_url: https://helpdesk.example.com/api
+    auth:
+      type: bearer
+    policy_sets:
+      read-only:
+        description: Reads tickets and customers. Never writes.
+        policies:
+          - match: "get_*"
+            action: always_run
+          - match: "*"
+            action: block
+
+policy:
+  default_mode: risk
+
+policies:
+  - match: "helpdesk.delete_*"
+    action: block
+
+approvals:
+  ttl: 24h
+
+agents:
+  discord-ops:
+    description: Answers questions in a Discord server and drafts the work, with a person approving anything that changes a system.
+    mode: primary
+    prompt_file: agents/discord-ops.md
+    tools: all
+    skills: all
+    connectors: [kortix_discord, helpdesk]
+    policy_sets:
+      helpdesk: read-only
+    secrets: [HELPDESK_TOKEN]
+    permission:
+      bash:
+        "*": allow
+        "git push *": ask
+    workspace: { project_repository: true }
