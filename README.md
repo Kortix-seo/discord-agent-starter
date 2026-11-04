@@ -85,8 +85,6 @@ Then add the channel as above, and set `HELPDESK_TOKEN` in Secrets before the fi
 
 ## Where to read more
 
-- The setup walk with the screenshots and the failure modes: https://agentsindiscord.com/how-to-add-an-ai-agent-to-discord
-- What an approval covers and what it leaves behind: https://agentsindiscord.com/approvals-in-discord
-- The channel reference, including the Discord section: https://kortix.com/docs/guide#channels
-- The manifest reference, every key: https://kortix.com/docs/developers#kortixyaml-reference
-- Kortix itself: https://kortix.com
+The setup walk, with the failure modes at each step, is at [how to add an AI agent to a Discord server](https://agentsindiscord.com/how-to-add-an-ai-agent-to-discord). If you are choosing between an open-source agent and a hosted bot, [the open-source Discord AI agent comparison](https://agentsindiscord.com/open-source-discord-ai-agent) starts from the manifest question. [What an agent may reach in a company's tools](https://agentsindiscord.com/discord-agent-with-company-tools) covers connectors and grants, and [what an approval covers](https://agentsindiscord.com/approvals-in-discord) covers the held action and the record it leaves. If your team is deciding where the agent should live, [Discord or Slack for an AI agent](https://agentsindiscord.com/discord-vs-slack-for-ai-agents) compares the two rooms. And [self-hosting a Discord agent](https://agentsindiscord.com/self-hosted-discord-agent) names which half of the stack stays on your server.
+
+The channel reference, including the Discord section, is at https://kortix.com/docs/guide#channels. The manifest reference, every key, is at https://kortix.com/docs/developers#kortixyaml-reference. Kortix itself is at https://kortix.com.
