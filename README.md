@@ -15,7 +15,7 @@ Two files, because those are the two things that go wrong. A bot that answers we
 
 ## Add it to a server
 
-The three steps are the ones Kortix's own Guide documents for the Discord channel.
+The three steps are the ones Kortix's own Guide documents for the Discord channel. If this is your first time, [how to add an AI agent to Discord](https://agentsindiscord.com/how-to-add-an-ai-agent-to-discord) walks the same three steps and names the failure at each one.
 
 **1. Add Kortix to your server.** Open Customize, then Connectors, select the Channels scope, and select Add to Discord. On Discord's page, pick the server. You need the Manage Server permission there. Kortix allows your own Discord account at once.
 
